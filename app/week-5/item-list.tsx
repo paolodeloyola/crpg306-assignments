@@ -30,7 +30,7 @@ export default function ItemList() {
     return 0;
   });
 
-  // Third button
+  // Grouping button
   const groupedItems = items.reduce((groups: Record<string, ItemType[]>, item) => {
     if (!groups[item.category]) {
       groups[item.category] = [];
@@ -47,12 +47,12 @@ export default function ItemList() {
 
   return (
     <div>
-      {/* Step 4 */}
+      {/* Step 4: BUTTONS*/}
       <div className="flex gap-4 mb-4">
         <button
           onClick={() => setSortBy("name")}
           className={`px-4 py-2 rounded ${
-            sortBy === "name" ? "bg-blue-600 text-white" : "bg-gray-200"
+            sortBy === "name" ? "bg-purple-600 text-white" : "bg-purple-200"
           }`}
         >
           Sort by Name
@@ -61,17 +61,17 @@ export default function ItemList() {
         <button
           onClick={() => setSortBy("category")}
           className={`px-4 py-2 rounded ${
-            sortBy === "category" ? "bg-blue-600 text-white" : "bg-gray-200"
+            sortBy === "category" ? "bg-purple-600 text-white" : "bg-purple-200"
           }`}
         >
           Sort by Category
         </button>
 
-        {/* NEW BUTTON FOR GROUPING */}
+        {/* GROUP BY CATEGORY BUTTON */}
         <button
           onClick={() => setSortBy("group")}
           className={`px-4 py-2 rounded ${
-            sortBy === "group" ? "bg-blue-600 text-white" : "bg-gray-200"
+            sortBy === "group" ? "bg-purple-600 text-white" : "bg-purple-200"
           }`}
         >
           Group by Category
@@ -83,7 +83,7 @@ export default function ItemList() {
         <div className="space-y-6">
           {sortedCategories.map((category) => (
             <div key={category}>
-              <h2 className="text-lg font-bold capitalize mb-2">
+              <h2 className="text-lg font-extrabold capitalize mb-3 text-black py-1 px-2 inline-block">
                 {category}
               </h2>
 
