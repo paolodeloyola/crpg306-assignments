@@ -26,7 +26,7 @@ export default function Page() {
     <main className="min-h-screen bg-gray-100 flex items-center justify-center">
       <div className="bg-white border border-gray-300 rounded-md p-8 w-full max-w-md text-center">
         <h1 className="text-2xl font-semibold mb-6 text-gray-800">
-          Log in to view shopping list
+          Login to view shopping list
         </h1>
 
         {!user ? (
